@@ -9,7 +9,6 @@
  * 
  */
 
-using System;
 using UnityEditor;
 using UnityEngine;
 namespace Kamishiro.UnityShader.MultiTexturePoster {

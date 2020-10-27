@@ -1,8 +1,15 @@
-﻿Shader "Kamishiro/MultiTexturePoster/Surface"
+﻿/*
+* Copyright (c) 2020 AoiKamishiro
+*
+* This code is provided under the MIT license.
+*
+*/
+
+Shader "Kamishiro/MultiTexturePoster/Surface"
 {
     Properties
     {
-        _Mode ("Transition Mode", int) = 0
+        [HideInInspector]_Mode ("Transition Mode", int) = 0
         _DispTime ("Display Time", float) = 5
         [HideInInspector]_FadeTime ("Fadeing Time", float) = 1
         _Count ("Poster Count", int) = 5
@@ -25,6 +32,7 @@
         [HideInInspector]_Version ("Version", int) = 0
         [Enum(UnityEngine.Rendering.CullMode)] _Cull ("Cull Mode", float) = 2
     }
+    
     SubShader
     {
         Tags { "RenderType" = "Opaque" }

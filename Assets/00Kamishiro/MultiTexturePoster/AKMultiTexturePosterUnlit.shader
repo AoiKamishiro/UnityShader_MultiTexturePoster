@@ -9,8 +9,8 @@ Shader "Kamishiro/MultiTexturePoster/Unlit"
 {
     Properties
     {
-        _Mode ("Transition Mode", int) = 0
-        _DispTime ("Display Time", int) = 5
+        [HideInInspector]_Mode ("Transition Mode", int) = 0
+        _DispTime ("Display Time", float) = 5
         [HideInInspector]_FadeTime ("Fadeing Time", float) = 1
         _Count ("Poster Count", int) = 5
         _MainTex ("Texture0", 2D) = "white" { }
