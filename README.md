@@ -13,4 +13,4 @@ UnityPackage をインポート後、マテリアルに使用するシェーダ�
 ### 連絡先
 [Twitter: @aoi3192](https://twitter.com/aoi3192)  
 [Booth: 神城工業](https://kamishirolab.booth.pm/)  
-VRC: 神城アオイ
+[VRC: 神城アオイ](https://www.vrchat.com/home/user/usr_19514816-2cf8-43cc-a046-9e2d87d15af7)
