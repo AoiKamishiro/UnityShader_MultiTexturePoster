@@ -27,6 +27,11 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
         public const string linkReadme = "https://github.com/AoiKamishiro/UnityShader_MultiTexturePoster";
         public const string linkDescription = "https://github.com/AoiKamishiro/UnityShader_MultiTexturePoster/blob/master/Description.md";
         public const string linkBooth = "https://kamishirolab.booth.pm/items/2483104";
-
+        public const string SimpleUnlitShader = "Kamishiro/MultiTexturePoster/Simple_Unlit";
+        public const string XFadeUnlitShader = "Kamishiro/MultiTexturePoster/XFade_Unlit";
+        public const string SlideUnlitShader = "Kamishiro/MultiTexturePoster/Slide_Unlit";
+        public const string SimpleSurfaceShader = "Kamishiro/MultiTexturePoster/Simple_Surface";
+        public const string XFadeSurfaceShader = "Kamishiro/MultiTexturePoster/XFade_Surface";
+        public const string SlideSurfaceShader = "Kamishiro/MultiTexturePoster/Slide_Surface";
     }
 }

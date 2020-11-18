@@ -2,7 +2,9 @@
 ## Main
 * Main
     * Display Time - テクスチャ一枚当たりの表示時間を指定します。
+    * Transition Time - 切り替えに要する時間を設定します。（XFade/Slide のみ）
     * Poster Count - 使用するポスターの枚数を指定します。1-16までが入力できます。
+    * Direction - スライドの方向を指定します（Slide のみ）
 * Textures
     * Texture0 - 1枚目のポスターテクスチャ。
     * Texture1 - 2枚目のポスターテクスチャ。

@@ -18,7 +18,7 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
     public class Manager : MonoBehaviour
     {
         public static int versionInt;
-        private const string version = "v1.00";
+        private const string version = "v1.10";
         private const string configName = "aksmultitexposter";
         private const string url = "https://api.github.com/repos/AoiKamishiro/UnityShader_MultiTexturePoster/releases/latest";
         private static UnityWebRequest www;
@@ -30,7 +30,7 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
             int.TryParse(version.Substring(1), out int verint);
             versionInt = verint * 100;
             // Check Local Version
-            string localVersion = EditorUserSettings.GetConfigValue(configName+"_version_local") ?? "";
+            string localVersion = EditorUserSettings.GetConfigValue(configName + "_version_local") ?? "";
 
             if (!localVersion.Equals(version))
             {
@@ -38,7 +38,7 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
                 //ArktoonMigrator.Migrate();
             }
             // Set Local Version
-            EditorUserSettings.SetConfigValue(configName+"_version_local", version);
+            EditorUserSettings.SetConfigValue(configName + "_version_local", version);
             // Get Remote Version
             www = UnityWebRequest.Get(url);
 
@@ -51,7 +51,7 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
 #endif
 
             EditorApplication.update += EditorUpdate;
-            EditorUserSettings.SetConfigValue(configName+"_need_update", NeedUpdate().ToString());
+            EditorUserSettings.SetConfigValue(configName + "_need_update", NeedUpdate().ToString());
         }
 
 
@@ -85,14 +85,14 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
         {
             GitJson git = JsonUtility.FromJson<GitJson>(apiResult);
             string version = git.tag_name;
-            EditorUserSettings.SetConfigValue(configName+"_version_remote", version);
+            EditorUserSettings.SetConfigValue(configName + "_version_remote", version);
         }
 
         private static bool NeedUpdate()
         {
             bool needUpdate = false;
-            bool parseLocal = double.TryParse((EditorUserSettings.GetConfigValue(configName+"_version_local")).Substring(1), out double localVer);
-            bool parseRemote = double.TryParse((EditorUserSettings.GetConfigValue(configName+"_version_remote")).Substring(1), out double remoteVer);
+            bool parseLocal = double.TryParse((EditorUserSettings.GetConfigValue(configName + "_version_local")).Substring(1), out double localVer);
+            bool parseRemote = double.TryParse((EditorUserSettings.GetConfigValue(configName + "_version_remote")).Substring(1), out double remoteVer);
             if (parseLocal && parseRemote && (localVer < remoteVer))
             {
                 needUpdate = true;
@@ -101,9 +101,9 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
         }
         public static void DisplayVersion()
         {
-            EditorGUILayout.LabelField(Styles.localVer + EditorUserSettings.GetConfigValue(configName+"_version_local"));
-            EditorGUILayout.LabelField(Styles.remoteVer + EditorUserSettings.GetConfigValue(configName+"_version_remote"));
-            if (bool.TryParse(EditorUserSettings.GetConfigValue(configName+"_need_update"), out bool needupdate) && needupdate)
+            EditorGUILayout.LabelField(Styles.localVer + EditorUserSettings.GetConfigValue(configName + "_version_local"));
+            EditorGUILayout.LabelField(Styles.remoteVer + EditorUserSettings.GetConfigValue(configName + "_version_remote"));
+            if (bool.TryParse(EditorUserSettings.GetConfigValue(configName + "_need_update"), out bool needupdate) && needupdate)
             {
                 //EditorGUILayout.BeginHorizontal();
                 if (GUILayout.Button(Styles.btnUpdate)) { UIHelper.OpenLink(Styles.linkRelease); }
