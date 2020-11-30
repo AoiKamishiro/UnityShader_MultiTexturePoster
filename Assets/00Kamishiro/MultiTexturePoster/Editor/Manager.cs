@@ -108,6 +108,7 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
                 //EditorGUILayout.BeginHorizontal();
                 if (GUILayout.Button(Styles.btnUpdate)) { UIHelper.OpenLink(Styles.linkRelease); }
                 if (GUILayout.Button(Styles.btnBooth)) { UIHelper.OpenLink(Styles.linkBooth); }
+                if (GUILayout.Button(Styles.btnVket)) { UIHelper.OpenLink(Styles.linkVket); }
                 //EditorGUILayout.EndHorizontal();
             }
         }

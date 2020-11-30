@@ -18,6 +18,7 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
         public const string remoteVer = "Remote Version: ";
         public const string btnUpdate = "Download latest version.";
         public const string btnBooth = "Download from Booth";
+        public const string btnVket = "Download from Vket";
         public const string btnDescription = "操作説明（日本語）";
         public const string btnReadme = "README.md";
         public const string nameMultiTexturePosterUnlit = "Multi Texture Poster / Unlit";
@@ -27,6 +28,7 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
         public const string linkReadme = "https://github.com/AoiKamishiro/UnityShader_MultiTexturePoster";
         public const string linkDescription = "https://github.com/AoiKamishiro/UnityShader_MultiTexturePoster/blob/master/Description.md";
         public const string linkBooth = "https://kamishirolab.booth.pm/items/2483104";
+        public const string linkVket ="https://www.v-market.work/ec/mypage/items/3997/detail/";
         public const string SimpleUnlitShader = "Kamishiro/MultiTexturePoster/Simple_Unlit";
         public const string XFadeUnlitShader = "Kamishiro/MultiTexturePoster/XFade_Unlit";
         public const string SlideUnlitShader = "Kamishiro/MultiTexturePoster/Slide_Unlit";
