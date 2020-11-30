@@ -9,7 +9,8 @@
     * Texture0 - 1枚目のポスターテクスチャ。
     * Texture1 - 2枚目のポスターテクスチャ。
                 ...
-    * Texture15 - 16枚目のポスターテクスチャ。
+    * Texture30 - 31枚目のポスターテクスチャ。
+    * Texture31 - 32枚目のポスターテクスチャ。
 * Rendering Options
     * Cull Mode - 裏面の描画などを設定します。
     * Render Queue - 描画時の処理順を設定します。

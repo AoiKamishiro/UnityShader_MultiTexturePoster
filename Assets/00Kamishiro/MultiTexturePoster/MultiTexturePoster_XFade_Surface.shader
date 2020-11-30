@@ -31,6 +31,22 @@ Shader "Kamishiro/MultiTexturePoster/XFade_Surface"
         _Tex13 ("Texture13", 2D) = "white" { }
         _Tex14 ("Texture14", 2D) = "white" { }
         _Tex15 ("Texture15", 2D) = "white" { }
+        _Tex16 ("Texture16", 2D) = "white" { }
+        _Tex17 ("Texture17", 2D) = "white" { }
+        _Tex18 ("Texture18", 2D) = "white" { }
+        _Tex19 ("Texture19", 2D) = "white" { }
+        _Tex20 ("Texture20", 2D) = "white" { }
+        _Tex21 ("Texture21", 2D) = "white" { }
+        _Tex22 ("Texture22", 2D) = "white" { }
+        _Tex23 ("Texture23", 2D) = "white" { }
+        _Tex24 ("Texture24", 2D) = "white" { }
+        _Tex25 ("Texture25", 2D) = "white" { }
+        _Tex26 ("Texture26", 2D) = "white" { }
+        _Tex27 ("Texture27", 2D) = "white" { }
+        _Tex28 ("Texture28", 2D) = "white" { }
+        _Tex29 ("Texture29", 2D) = "white" { }
+        _Tex30 ("Texture30", 2D) = "white" { }
+        _Tex31 ("Texture31", 2D) = "white" { }
         [HideInInspector]_Version ("Version", int) = 0
         [Enum(UnityEngine.Rendering.CullMode)] _Cull ("Cull Mode", float) = 2
     }

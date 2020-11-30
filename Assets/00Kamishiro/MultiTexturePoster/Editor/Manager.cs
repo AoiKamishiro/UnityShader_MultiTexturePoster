@@ -18,7 +18,7 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
     public class Manager : MonoBehaviour
     {
         public static int versionInt;
-        private const string version = "v1.10";
+        private const string version = "v2.00";
         private const string configName = "aksmultitexposter";
         private const string url = "https://api.github.com/repos/AoiKamishiro/UnityShader_MultiTexturePoster/releases/latest";
         private static UnityWebRequest www;

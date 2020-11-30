@@ -9,7 +9,8 @@
     * Texture0 - First poster texture.
     * Texture1 - Second poster texture.
                 ...
-    * Texture15 - Sixteenth poster texture.
+    * Texture30 - 31th poster texture.
+    * Texture31 - 32th poster texture.
 * Rendering Options
     * Cull ModeCull Mode -  The display settings for the front and back of the object.
     * Render Queue - set the rendering order.

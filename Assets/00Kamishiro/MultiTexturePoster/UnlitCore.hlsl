@@ -22,6 +22,22 @@ UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex12);
 UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex13);
 UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex14);
 UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex15);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex16);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex17);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex18);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex19);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex20);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex21);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex22);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex23);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex24);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex25);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex26);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex27);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex28);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex29);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex30);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_Tex31);
 
 struct appdata_t
 {
@@ -104,6 +120,70 @@ fixed4 SimpleMode(float2 uv, float localTime)
     if(_SingleTime * 15 <= localTime && localTime < _SingleTime * 16)
     {
         col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex15, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 16 <= localTime && localTime < _SingleTime * 17)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex16, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 17 <= localTime && localTime < _SingleTime * 18)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex17, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 18 <= localTime && localTime < _SingleTime * 19)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex18, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 19 <= localTime && localTime < _SingleTime * 20)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex19, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 20 <= localTime && localTime < _SingleTime * 21)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex20, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 21 <= localTime && localTime < _SingleTime * 22)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex21, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 22 <= localTime && localTime < _SingleTime * 23)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex22, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 23 <= localTime && localTime < _SingleTime * 24)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex23, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 24 <= localTime && localTime < _SingleTime * 25)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex24, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 25 <= localTime && localTime < _SingleTime * 26)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex25, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 26 <= localTime && localTime < _SingleTime * 27)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex26, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 27 <= localTime && localTime < _SingleTime * 28)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex27, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 28 <= localTime && localTime < _SingleTime * 29)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex28, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 29 <= localTime && localTime < _SingleTime * 30)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex29, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 30 <= localTime && localTime < _SingleTime * 31)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex30, _MainTex, uv).rgba;
+    }
+    if(_SingleTime * 31 <= localTime && localTime < _SingleTime * 32)
+    {
+        col = UNITY_SAMPLE_TEX2D_SAMPLER(_Tex31, _MainTex, uv).rgba;
     }
     return col;
 }

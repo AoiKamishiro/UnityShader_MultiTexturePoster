@@ -47,6 +47,22 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
         private MaterialProperty tex13;
         private MaterialProperty tex14;
         private MaterialProperty tex15;
+        private MaterialProperty tex16;
+        private MaterialProperty tex17;
+        private MaterialProperty tex18;
+        private MaterialProperty tex19;
+        private MaterialProperty tex20;
+        private MaterialProperty tex21;
+        private MaterialProperty tex22;
+        private MaterialProperty tex23;
+        private MaterialProperty tex24;
+        private MaterialProperty tex25;
+        private MaterialProperty tex26;
+        private MaterialProperty tex27;
+        private MaterialProperty tex28;
+        private MaterialProperty tex29;
+        private MaterialProperty tex30;
+        private MaterialProperty tex31;
         #endregion
         private void FindProperties(MaterialProperty[] props)
         {
@@ -73,6 +89,22 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
             tex13 = FindProperty("_Tex13", props);
             tex14 = FindProperty("_Tex14", props);
             tex15 = FindProperty("_Tex15", props);
+            tex16 = FindProperty("_Tex16", props);
+            tex17 = FindProperty("_Tex17", props);
+            tex18 = FindProperty("_Tex18", props);
+            tex19 = FindProperty("_Tex19", props);
+            tex20 = FindProperty("_Tex20", props);
+            tex21 = FindProperty("_Tex21", props);
+            tex22 = FindProperty("_Tex22", props);
+            tex23 = FindProperty("_Tex23", props);
+            tex24 = FindProperty("_Tex24", props);
+            tex25 = FindProperty("_Tex25", props);
+            tex26 = FindProperty("_Tex26", props);
+            tex27 = FindProperty("_Tex27", props);
+            tex28 = FindProperty("_Tex28", props);
+            tex29 = FindProperty("_Tex29", props);
+            tex30 = FindProperty("_Tex30", props);
+            tex31 = FindProperty("_Tex31", props);
         }
         public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
         {
@@ -156,6 +188,38 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
                 m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex14.displayName), tex14);
             if (num >= 16)
                 m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex15.displayName), tex15);
+            if (num >= 17)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex16.displayName), tex16);
+            if (num >= 18)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex17.displayName), tex17);
+            if (num >= 19)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex18.displayName), tex18);
+            if (num >= 20)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex19.displayName), tex19);
+            if (num >= 21)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex20.displayName), tex20);
+            if (num >= 22)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex21.displayName), tex21);
+            if (num >= 23)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex22.displayName), tex22);
+            if (num >= 24)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex23.displayName), tex23);
+            if (num >= 25)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex24.displayName), tex24);
+            if (num >= 26)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex25.displayName), tex25);
+            if (num >= 27)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex26.displayName), tex26);
+            if (num >= 28)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex27.displayName), tex27);
+            if (num >= 29)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex28.displayName), tex28);
+            if (num >= 30)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex29.displayName), tex29);
+            if (num >= 31)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex30.displayName), tex30);
+            if (num >= 32)
+                m_MaterialEditor.TexturePropertySingleLine(new GUIContent(tex31.displayName), tex31);
 
             EditorGUI.indentLevel--;
         }
@@ -166,9 +230,9 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
             {
                 count.floatValue = (float)1;
             }
-            else if (16 < num)
+            else if (32 < num)
             {
-                count.floatValue = (float)16;
+                count.floatValue = (float)32;
             }
         }
         private void ModeCheck(Material material)
