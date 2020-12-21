@@ -90,7 +90,7 @@ Shader "Kamishiro/MultiTexturePoster/Simple_Surface"
             }
             else
             {
-                localTime = fmod(_SingleTime * _Select, _CycleTime);
+                localTime = fmod(_SingleTime * _Select + 0.001, _CycleTime);
             }
             fixed4 c = SimpleMode(IN.uv_MainTex, localTime);
             o.Albedo = c.rgb;

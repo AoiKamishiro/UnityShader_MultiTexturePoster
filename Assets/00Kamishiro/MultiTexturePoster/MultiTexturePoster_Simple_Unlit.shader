@@ -97,7 +97,7 @@ Shader "Kamishiro/MultiTexturePoster/Simple_Unlit"
                 }
                 else
                 {
-                    localTime = fmod(_SingleTime * _Select, _CycleTime);
+                    localTime = fmod(_SingleTime * _Select + 0.001, _CycleTime);
                 }
                 col = SimpleMode(i.uv.xy, localTime);
                 UNITY_APPLY_FOG(i.fogCoord, col);
