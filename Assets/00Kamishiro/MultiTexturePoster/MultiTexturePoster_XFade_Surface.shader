@@ -15,6 +15,8 @@ Shader "Kamishiro/MultiTexturePoster/XFade_Surface"
         [HideInInspector]_SingleTime ("Total Time", float) = 6//Calc in UI
         [HideInInspector]_CycleTime ("Cycle Time", float) = 30//Calc in UI
         [Enum(Up, 0, Down, 1, Right, 2, Left, 3)]_Direction ("Scroll Direction", float) = 0
+        [Toggle]_ManualSelect ("Manual Select", float) = 0
+        _Select ("Select", int) = 0
         _MainTex ("Texture0", 2D) = "white" { }
         _Tex1 ("Texture1", 2D) = "white" { }
         _Tex2 ("Texture2", 2D) = "white" { }
@@ -66,6 +68,9 @@ Shader "Kamishiro/MultiTexturePoster/XFade_Surface"
         #pragma target 4.0
         
         #include "SurfaceCore.hlsl"
+        
+        float _ManualSelect;
+        int _Select;
         
         struct Input
         {

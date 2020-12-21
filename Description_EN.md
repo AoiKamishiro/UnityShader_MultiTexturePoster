@@ -11,6 +11,9 @@
                 ...
     * Texture30 - 31th poster texture.
     * Texture31 - 32th poster texture.
+* Manual Option
+    * Use Manual Operation - Manually control the image switching.
+    * Select - specifies the number of the image to be displayed during manual control.
 * Rendering Options
     * Cull ModeCull Mode -  The display settings for the front and back of the object.
     * Render Queue - set the rendering order.

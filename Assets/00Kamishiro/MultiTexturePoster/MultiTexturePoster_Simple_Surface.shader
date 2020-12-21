@@ -15,6 +15,8 @@ Shader "Kamishiro/MultiTexturePoster/Simple_Surface"
         [HideInInspector]_SingleTime ("Total Time", float) = 6//Calc in UI
         [HideInInspector]_CycleTime ("Cycle Time", float) = 30//Calc in UI
         [Enum(Up, 0, Down, 1, Right, 2, Left, 3)]_Direction ("Scroll Direction", float) = 0
+        [Toggle]_ManualSelect ("Manual Select", float) = 0
+        _Select ("Select", int) = 0
         _MainTex ("Texture0", 2D) = "white" { }
         _Tex1 ("Texture1", 2D) = "white" { }
         _Tex2 ("Texture2", 2D) = "white" { }
@@ -67,6 +69,9 @@ Shader "Kamishiro/MultiTexturePoster/Simple_Surface"
         
         #include "SurfaceCore.hlsl"
         
+        float _ManualSelect;
+        int _Select;
+        
         struct Input
         {
             float2 uv_MainTex;
@@ -78,7 +83,15 @@ Shader "Kamishiro/MultiTexturePoster/Simple_Surface"
         
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
-            float localTime = fmod(_Time.y, _CycleTime);
+            float localTime = 0;
+            if (_ManualSelect == 0)
+            {
+                localTime = fmod(_Time.y, _CycleTime);
+            }
+            else
+            {
+                localTime = fmod(_SingleTime * _Select, _CycleTime);
+            }
             fixed4 c = SimpleMode(IN.uv_MainTex, localTime);
             o.Albedo = c.rgb;
             o.Alpha = 1.0;

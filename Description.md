@@ -11,6 +11,9 @@
                 ...
     * Texture30 - 31枚目のポスターテクスチャ。
     * Texture31 - 32枚目のポスターテクスチャ。
+* Manual Option
+    * Use Manual Operation - 画像の切り替えを手動で制御します。
+    * Select - 手動制御の時に表示する画像の番号を指定します。
 * Rendering Options
     * Cull Mode - 裏面の描画などを設定します。
     * Render Queue - 描画時の処理順を設定します。

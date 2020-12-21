@@ -30,6 +30,8 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
         private MaterialProperty cycleTime;
         private MaterialProperty direction;
         private MaterialProperty count;
+        private MaterialProperty manualSelect;
+        private MaterialProperty select;
         private MaterialProperty mainTex;
         private MaterialProperty cull;
         private MaterialProperty tex1;
@@ -73,6 +75,8 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
             singleTime = FindProperty("_SingleTime", props);
             cycleTime = FindProperty("_CycleTime", props);
             cull = FindProperty("_Cull", props);
+            manualSelect = FindProperty("_ManualSelect", props);
+            select = FindProperty("_Select", props);
             mainTex = FindProperty("_MainTex", props);
             tex1 = FindProperty("_Tex1", props);
             tex2 = FindProperty("_Tex2", props);
@@ -133,9 +137,8 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
                 EditorGUILayout.LabelField("Textures", EditorStyles.boldLabel);
                 DoTextures();
                 EditorGUILayout.Space();
-                EditorGUILayout.Space();
+                DoManualOption(material);
                 EditorGUILayout.LabelField("Rendering Option", EditorStyles.boldLabel);
-
                 m_MaterialEditor.ShaderProperty(cull, cull.displayName);
                 m_MaterialEditor.RenderQueueField();
             }
@@ -152,6 +155,16 @@ namespace Kamishiro.UnityShader.MultiTexturePoster
             if (GUILayout.Button(Styles.btnReadme)) { UIHelper.OpenLink(Styles.linkReadme); }
             if (GUILayout.Button(Styles.btnDescription)) { UIHelper.OpenLink(Styles.linkDescription); }
             EditorGUILayout.EndHorizontal();
+        }
+        private void DoManualOption(Material material)
+        {
+            if (material.shader.name == Styles.SimpleSurfaceShader)
+            {
+                EditorGUILayout.LabelField("Manual Option", EditorStyles.boldLabel);
+                m_MaterialEditor.ShaderProperty(manualSelect, "Use Manual Operation");
+                m_MaterialEditor.ShaderProperty(select, select.displayName);
+                EditorGUILayout.Space();
+            }
         }
         private void DoTextures()
         {
